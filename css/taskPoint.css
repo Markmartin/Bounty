@@ -1,0 +1,1346 @@
+@media screen and (max-height: 2500px) {
+    #space {
+        height: 2500px;
+        position: absolute;
+    }
+}
+
+#rewardCodeRecord {
+    display: none;
+}
+
+.exchangeRecordCtx {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 600px;
+    z-index: 3;
+}
+
+.recordTableCtx {
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+    width: 1200px;
+    height: 100%;
+}
+
+.tableTitle {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    padding-left: 15px;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-size: 18px;
+    border: 1.2px solid transparent;
+    border-radius: 0 35px 0 0;
+    background-color: #39ADFF;
+}
+
+.backToTaskCtx {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 40px;
+}
+
+.backToTaskIcon {
+    position: relative;
+    display: inline-block;
+    left: 35px;
+    top: 7px;
+    width: 25px;
+    height: 25px;
+}
+
+.backToTaskDes {
+    position: relative;
+    display: inline-block;
+    left: 50px;
+    top: 7px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    color: white;
+    vertical-align: top;
+}
+
+.tableContentCtx {
+    position: relative;
+    top: 42px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableContentCtx tr {
+    display: none;
+}
+
+.column1 {
+    width: 445px;
+    height: 40px;
+}
+
+.column2 {
+    width: 445px;
+    height: 40px;
+}
+
+.column3 {
+    width: 300px;
+    height: 40px;
+}
+
+.thFont {
+    color: #39ADFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+}
+
+.tdFont {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 40px;
+}
+
+.thborder {
+    border: 1px solid #39ADFF;
+}
+
+.tdborder {
+    border: 1px solid #39ADFF;
+    border-top: none;
+}
+
+.pageView {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 20px;
+    width: 200px;
+    height: 30px;
+    /* background-color: aquamarine; */
+}
+
+.lastPage {
+    position: absolute;
+    display: inline-block;
+    left: 5px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.page {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+.nextPage {
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.noPage {
+    cursor: default;
+    color: #858585;
+}
+
+.tabBarCtx {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-color: transparent;
+}
+
+.tabBar_firstCtx {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    background-color: transparent;
+}
+
+.tabBar_secondCtx {
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background-color: transparent;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    width: 215px;
+    height: 60px;
+    /*margin: 0 0 0 20px;*/
+    left: 43%;
+    top: 25%;
+}
+
+.popUp {
+    position: fixed;
+    /* opacity: 0; */
+    display: none;
+    z-index: 10;
+    width: 550px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -175px 0 0 -275px;
+    background-color: white;
+}
+
+.menuClose {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    background: url("../image/recordMenu_close.png") center no-repeat;
+    background-size: 20px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.rewarCodeLabelCtx {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 450px;
+    height: 30px;
+    border: 1px solid #39ADFF;
+    border-radius: 5px;
+}
+
+.rewardCode {
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    top: 2px;
+    width: 420px;
+    height: 24px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 350;
+    border: none;
+    outline: none;
+}
+
+.exchangeRecordBtn {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    margin-left: -160px;
+    top: 65px;
+    background-color: white;
+    color: #39ADFF;
+}
+
+.exchangeBtn {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    margin-left: 10px;
+    top: 65px;
+    background-color: #39ADFF;
+    color: white;
+}
+
+.btn {
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    border: 1.5px solid #39ADFF;
+    border-radius: 17.5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.exchangeDesCtx {
+    position: relative;
+    left: 50px;
+    top: 80px;
+    width: 450px;
+    height: 70px;
+}
+
+.exchangeDes {
+    position: relative;
+    display: block;
+    top: 5px;
+    left: 20px;
+    width: 430px;
+    height: 20px;
+    line-height: 20px;
+    color: #7c7c7c;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+}
+
+.rewardCodeRuleLink {
+    position: relative;
+    display: block;
+    top: 110px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 350;
+    color: #39ADFF;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+}
+
+.exchangeMenuBtn {
+    position: relative;
+    /**display: inline-block;**/
+    display: none;
+    left: 35%;
+    top: 45%;
+    height: 30px;
+    width: 150px;
+    border: 1.5px solid #39ADFF;
+    border-radius: 15px;
+    vertical-align: top;
+    background-color: white;
+    cursor: pointer;
+}
+
+.exchangeIcon {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.exchangeBtnDes {
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    color: #39ADFF;
+    cursor: pointer;
+}
+
+.userMail {
+    position: relative;
+    display: inline-block;
+    left: 37%;
+    top: 45%;
+    width: 220px;
+    height: 30px;
+    background: url(../image/textarea.png) left top no-repeat;
+    background-size: 220px 30px;
+}
+
+.mailIcon {
+    position: absolute;
+    display: inline-block;
+    margin: -8px 0 0 10px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.mailInfo {
+    position: absolute;
+    display: inline-block;
+    width: 175px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    left: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.loginOut {
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    margin-top: -12px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.taskTipsCtx {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 90px;
+    background-color: #39ADFF;
+}
+
+.givenPointCtx {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.todayPointCtx {
+    position: relative;
+    display: inline-block;
+    width: 190px;
+    height: 100%;
+    left: 27%;
+    vertical-align: top;
+}
+
+.vline {
+    position: relative;
+    display: inline-block;
+    width: 1px;
+    height: 60px;
+    background-color: white;
+    left: 29%;
+    top: 15px;
+    vertical-align: top;
+}
+
+.pointDesCtx {
+    position: relative;
+    display: inline-block;
+    width: 330px;
+    height: 60px;
+    top: 15px;
+    left: 31%;
+    vertical-align: top;
+}
+
+.pointDes {
+    display: block;
+    position: relative;
+    color: white;
+    font-size: 13px;
+    line-height: 20px;
+    height: 20px;
+}
+
+.availableDes {
+    display: block;
+    color: white;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    top: 10px;
+}
+
+.availableDesCn {
+    display: block;
+    color: white;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    top: 10px;
+    padding-left: 70px;
+}
+
+.availableDesKn {
+    display: block;
+    color: white;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    top: 10px;
+    padding-left: 110px;
+}
+
+.givenDes {
+    font-size: 16px;
+    color: white;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    margin-left: -145px;
+    left: 50%;
+    top: 10px;
+    font-weight: 500;
+}
+
+.givenPoints {
+    display: block;
+    font-size: 43px;
+    color: white;
+    position: relative;
+    left: 70px;
+    height: 50px;
+    line-height: 50px;
+    top: 8px;
+    font-weight: 500;
+}
+
+.givenPointsCn {
+    display: block;
+    font-size: 43px;
+    color: white;
+    position: relative;
+    left: 120px;
+    height: 50px;
+    line-height: 50px;
+    top: 8px;
+    font-weight: 500;
+}
+
+.pointsAndInviteCtx {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+.pointCtx {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    left: 52%;
+    margin-left: -160px;
+    vertical-align: top;
+    top: 15px;
+    background-color: #3d8adb;
+}
+
+.dataBorder {
+    border: 1.2px solid;
+    border-color: transparent;
+    border-radius: 20px;
+}
+
+.des {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: top;
+    top: 20px;
+    margin-left: 20px
+}
+
+.pointLabel {
+    color: white;
+    position: relative;
+    top: 5px;
+    margin-left: 15px;
+    margin-right: 20px;
+    font-size: 43px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+.inviteCountCtx {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    left: 53%;
+    margin-left: 8px;
+    vertical-align: top;
+    top: 15px;
+    background-color: #3d8adb;
+}
+
+.ides {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: top;
+    top: 20px;
+    margin-left: 10px
+}
+
+.invitedLabel {
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-size: 43px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: top;
+    font-weight: 500;
+    top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.marqueeCtx {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background-color: springgreen; */
+    /* top: 20px; */
+    font-size: 0;
+}
+
+.marquee {
+    position: absolute;
+    -webkit-animation: marquee 10s linear infinite;
+    -moz-animation: marquee 10s linear infinite;
+    -ms-animation: marquee 10s linear infinite;
+    -o-animation: marquee 10s linear infinite;
+    animation: marquee 10s linear infinite;
+}
+
+.marqueeContent {
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    width: 100%;
+    margin-top: -0px;
+}
+
+.channelCtx{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    top:20px;
+    font-size: 0;
+}
+
+.channelLink{
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 50px;
+}
+
+.redditCtx{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    top:20px;
+    font-size: 0;
+}
+
+.redditLink{
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 50px;
+}
+
+
+
+.steemitCtx{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    top:20px;
+    font-size: 0;
+    display: none;
+   
+}
+
+.steemitLink{
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 50px;
+    
+}
+
+
+
+.youtubeCtx{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    top:20px;
+    font-size: 0;
+}
+
+.youtubeLink{
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 50px;
+}
+
+.subscribeBtn{
+    margin-top: 59px;
+}
+
+.telegramCtx {
+    position: relative;
+    width: 100%;
+    /**height: 295px;**/
+    height: 450px;
+    top: 20px;
+    font-size: 0;
+}
+
+.facebookCtx {
+    position: relative;
+    width: 100%;
+    height: 245px;
+    font-size: 0;
+}
+
+.twitterCtx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    font-size: 0;
+}
+
+.inviteCtx {
+    position: relative;
+    width: 100%;
+    height: 235px;
+    font-size: 0;
+}
+
+.copyRightCtx {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.shadowLine {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: radial-gradient(#39ADFF 0%, transparent 100%);
+}
+
+.taskContent {
+    position: relative;
+    box-sizing: border-box;
+    left: 50%;
+    margin-left: -600px;
+    width: 1200px;
+    height: 100%;
+
+}
+
+.taskIconCtx {
+    display: inline-block;
+    height: 100%;
+    width: 10%;
+}
+
+.taskDesCtx {
+    display: inline-block;
+    height: 100%;
+    width: 70%;
+    vertical-align: top;
+}
+
+.taskActionCtx {
+    display: inline-block;
+    height: 100%;
+    width: 15%;
+    vertical-align: top;
+}
+
+.taskIcon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: 50%;
+    margin: 45px 0 0 10px;
+}
+
+.centerTaskIcon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: 50%;
+    margin: 43px 0 0 10px;
+}
+
+.taskDes {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 35px;
+    padding-left: 50px;
+    letter-spacing: 1.2px;
+    vertical-align: top;
+}
+
+.taskDesKn {
+    display: inline-block;
+    height: 60px;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 45px;
+    padding-left: 50px;
+    letter-spacing: 1.0px;
+    vertical-align: top;
+}
+
+.ncTaskDes {
+    color: white;
+}
+
+.cTaskDes {
+    color: #A0A0A0;
+    text-decoration: line-through;
+}
+
+.taskDesY {
+    font-style: oblique;
+}
+
+.ncTaskDesY {
+    color: yellow;
+}
+
+.cTaskDesY {
+    color: #A0A0A0;
+}
+
+.telegramTaskDes {
+    margin-top: 10px;
+    height: 60px;
+}
+
+.telegramTaskDesSub{
+    margin-top: 30px;
+    height: 60px;
+}
+
+.telegramTaskDesVertify {
+    margin-top: 30px;
+    height: 40px;
+   
+}
+
+.telegramTaskDesKn {
+    margin-top: 20px;
+    height: 60px;
+}
+
+.twitterTaskDes {
+    margin-top: 25px;
+    height: 30px;
+}
+
+.twitterTaskDesKn {
+    margin-top: 10px;
+    height: 30px;
+}
+
+.circle {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    padding: 0px 0 0 50px;
+    width: 10px;
+    height: 10px;
+}
+
+.taskMsgSpace {
+    margin-left: 15px;
+}
+
+.noTagTaskMsgSpace {
+    margin-left: 50px;
+}
+
+.taskMsg {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    /*letter-spacing: 1px;*/
+}
+
+.telegramLink {
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 75px;
+}
+
+.copyContent {
+    display: block;
+    padding-left: 5px;
+    height: 25px;
+    line-height: 25px;
+    width: 700px;
+    color: #7f7f7f;
+    font-size: 18px;
+    outline: none;
+    background-color: #e5e5e5;
+    border: 1.2px solid;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.codeSpace {
+    margin: 10px 0 0 75px;
+}
+
+.inviteSpace {
+    margin: 25px 0 0 50px;
+}
+
+.button {
+    display: block;
+    color: white;
+    font-size: 18px;
+    width: 130px;
+    height: 45px;
+    border: 1.2px solid;
+    border-radius: 25px;
+    border-color: transparent;
+    outline: none;
+}
+
+.ncButton {
+    cursor: pointer;
+    background-color: #39ADFF;
+}
+
+.cButton {
+    background-color: #A0A0A0;
+}
+
+.tJoinBtn {
+    margin-top: 100px;
+}
+
+.tCopyBtn {
+    margin-top: 35px;
+}
+.channelSubscribeBtn{
+    margin-top: 30px;
+}
+
+.vertifyChannelBtn{
+    margin-top: 30px;
+}
+.fBindBtn {
+    margin-top: 90px;
+}
+
+.fShareBtn {
+    margin-top: 25px;
+}
+
+.tBindBtn {
+    margin-top: 90px;
+}
+
+.tBindBtnKn {
+    margin-top: 115px;
+}
+
+.tRetweetBtn {
+    line-height: 45px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: default;
+}
+
+.tVerifyBtn {
+    margin-top: 15px;
+}
+
+.iCopyBtn {
+    margin-top: 139px;
+}
+
+.iCopyBtnKn {
+    margin-top: 159px;
+}
+
+.cnFontSize {
+    font-size: 17px;
+}
+
+.lineBlock {
+    display: block;
+}
+
+/**微博任务**/
+.weiboCtx {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    font-size: 0;
+}
+.wbDes{
+    height: 60px;
+    margin-top: 10px;
+}
+.wbBindTaskDes{
+    height: 60px;
+    margin-top: 10px;
+}
+.wbAttentionTaskDes{
+    height: 60px;
+    margin-top: 10px;
+}
+.wbAttentionVerifyTaskDes{
+    height: 60px;
+    margin-top: 10px;
+}
+.wbForwardDes{
+    height: 60px;
+    margin-top: 10px;
+}
+.wbForwardVerifyDes{
+    height: 60px;
+    margin-top: 10px;
+}
+
+.wbBindBtn{
+    margin-top: 90px;
+}
+.wbAttentionBtn{
+    margin-top: 10px;
+}
+.wbAttentionVerifyBtn{
+    margin-top: 10px;
+}
+.wbForwardBtn{
+    margin-top: 10px;
+}
+.wbForwardVerifyBtn{
+    margin-top: 10px;
+}
+
+
+/**周排行榜**/
+/**
+.rankListCtx {
+    position: fixed;
+    top: 200px;
+    right: 0px;
+    width: 390px;
+    height: 630px;
+    z-index: 2;
+    transform: translate(318px, 0px);
+    transition: all .8s ease;
+}
+
+.rankBtnCtx {
+    position: absolute;
+    top: 50px;
+    width: 70px;
+    height: 70px;
+    z-index: 5;
+    transition: all .8s ease;
+}
+
+.rankBtnBorder {
+    border: 1.5px solid;
+    border-color: #39ADFF;
+    border-radius: 15px 0 0 15px;
+}
+
+.rankBtnBackImage {
+    background: url(../image/ranking_open.png) no-repeat 13px 15px transparent;
+    background-size: 25px 25px;
+}
+
+.rankBtnOpenImage {
+    background: url(../image/ranking_close.png) no-repeat 13px 15px #39ADFF;
+    background-size: 25px 25px;
+}
+
+.arrow {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    transition: all .8s ease;
+}
+
+.arrowOpen {
+    background: url(../image/arrow_open.png) no-repeat 2px 7px;
+    background-size: 20px 20px;
+}
+
+.arrowClose {
+    background: url(../image/arrow_close.png) no-repeat 2px 7px;
+    background-size: 20px 20px;
+}
+
+.rankBtnTitle {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1.2px;
+}
+
+.rankCtx {
+    position: absolute;
+    right: -2px;
+    width: 315px;
+    height: 100%;
+    background-color: white;
+}
+
+.rankBorder {
+    border: 3px solid;
+    border-color: #39ADFF;
+    border-radius: 25px 0 0 25px;
+}
+
+.rankTitle {
+    display: block;
+    position: relative;
+    widows: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #39ADFF;
+}
+
+.rank {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.singularBackColor {
+    background-color: #d7f0ff;
+}
+
+.pluralBackColor {
+    background-color: white;
+}
+
+.order {
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    width: 20px;
+    height: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    vertical-align: top;
+}
+
+.rankMail {
+    position: relative;
+    display: inline-block;
+    left: 40px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.rankPoint {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #39ADFF;
+    font-size: 20px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.userRank {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #39ADFF;
+}
+
+.userRankDes {
+    position: relative;
+    display: block;
+    left: 20px;
+    top: 10px;
+    width: 200px;
+    height: 15px;
+    line-height: 15px;
+    color: white;
+    font-size: 15px;
+}
+
+.userOrder {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 20px;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: white;
+    text-align: left;
+    vertical-align: top;
+}
+
+.userRankMail {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 18px;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.userPoint {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.rankDesCtx {
+    position: relative;
+    widows: 100%;
+    height: 120px;
+}
+
+.rankDesFirst {
+    position: relative;
+    top: 10px;
+    widows: 100%;
+    height: 36px;
+}
+
+.rankDesSecond {
+    position: relative;
+    top: 10px;
+    widows: 100%;
+    height: 36px;
+}
+
+.rankDesThird {
+    position: relative;
+    top: 15px;
+    widows: 100%;
+    height: 36px;
+}
+
+.rankCircle {
+    position: absolute;
+    display: inline-block;
+    top: 3px;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+}
+
+.rankDes {
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 285px;
+    height: 100%;
+    line-height: 18px;
+    font-size: 13px;
+    color: #858585;
+    letter-spacing: 0.35px;
+}
+
+.rankDesUnderLine {
+    text-decoration: underline;
+    cursor: pointer;
+}**/

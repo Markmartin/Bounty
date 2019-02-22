@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118861086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-118861086-1');
+    </script>
+    <meta charset="utf-8">
+    <title>ITC Bounty System[beta]</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/mailBox.css" />
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <link rel="icon" href="titleLogo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="contentCtx">
+        <img class="logo" src="image/logo.png" />
+        <label class="registerReply">
+			<span class="tk">ITC바운티 시스템에 가입해주셔서 감사합니다!</span>
+			<br /> 유저님 앞으로 메일을 보내드렸습니다.
+		</label>
+        <button id="gotoEmail" class="goMailBox">메일 열기</button>
+        <div class="backLoginKn">
+            <img class="back" src="image/back.png" />
+            <label class="backDes">로그인 페이지로 돌아가기</label>
+        </div>
+        <div class="mailTips">
+            <label class="lineLabel">메일중의 링크를 클릭하면 인증과정이 종료되며, 로그인 페이지로 돌아가게 됩니다.</label>
+            <!--<label class="lineLabel">If you want to modify the mailbox, please click here.<span class="modify">Modify</span></label>-->
+            <label class="lineLabel">인증메일을 받지 못하셨다면 재발송을 클릭하여 주십시오.
+				<span id="timerLabel" class="resend">재발송(60s).</span>
+			</label>
+        </div>
+    </div>
+    <div class="copyRight">All rights reserved to IoT Foundation</div>
+    <div class="loader">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/mailBoxKn.js" type="text/javascript" charset="utf-8"></script>
+    <canvas id="space"></canvas>
+    <script src="js/starcanvas.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

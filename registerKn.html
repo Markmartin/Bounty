@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118861086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-118861086-1');
+    </script>
+    <meta charset="utf-8">
+    <title>ITC Bounty System[beta]</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <link rel="icon" href="titleLogo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="contentCtx">
+        <img class="logo" src="image/logo.png" />
+        <div class="textFieldCtx textFieldRadius">
+            <img class="fieldLogo" src="image/user.png" />
+            <input class="textField" id="email" type="text" placeholder="메일주소 입력" />
+        </div>
+        <div class="textFieldCtx textFieldRadius">
+            <img class="fieldLogo" src="image/pwd.png" />
+            <input class="textField" id="pwd" type="password" placeholder="비밀번호 입력은 6자리수 이상이어야 합니다" />
+        </div>
+        <div class="textFieldCtx textFieldRadius">
+            <img class="fieldLogo" src="image/pwd.png" />
+            <input class="textField" id="pwdAgain" type="password" placeholder="비밀번호를 재차 입력해주세요" />
+        </div>
+        <div class="textFieldCtx textFieldRadius">
+            <img class="fieldLogo" src="image/wallte.png" />
+            <input class="textField" id="eth" type="text" placeholder="ITC바운티를 받아갈 ETH개인지갑 주소" />
+        </div>
+        <div class="note">
+            <img class="noteMark" src="image/noteMark.png" />
+            <label class="noteMsg">
+				ETH개인지갑 주소를 사용하여주십시오
+				<br /> 거래소 지갑주소를 사용하지 말아 주십시오
+				<br /> 한번 제출하신 지갑주소는 추후 변경/수정 불가합니다
+			</label>
+        </div>
+        <div class="robotVerification" id="robotVerification"></div>
+        <div class="signOrLogin">
+            <button id="register" class="buttonFrame signup">가입</button>
+            <button id="login" class="buttonFrame orLogin">혹은
+				<span class="loginText">로그인</span>
+			</button>
+        </div>
+    </div>
+    <div class="copyRight">All rights reserved to IoT Foundation</div>
+    <div class="loader">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoadCallback&render=explicit" async defer></script>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/registerKn.js" type="text/javascript" charset="utf-8"></script>
+    <canvas id="space"></canvas>
+    <script src="js/starcanvas.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta charset="utf-8">
+    <title>ITC Bounty System[beta]</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/recordList.css" />
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <link rel="icon" href="titleLogo.ico" type="image/x-icon" />
+</head>
+</head>
+<body class="recordBody">
+   <div class="recordContainer">
+
+       <table class="tableBox" id="tableBox">
+           <tr id="tr0" class="bgTransparent">
+               <th class="thBorder">
+                   <div class="column1 thFont">RewardId</div>
+               </th>
+               <th class="thBorder">
+                   <div class="column2 thFont">RewardCode</div>
+               </th>
+               <th class="thBorder">
+                   <div class="column3 thFont">GroupName</div>
+               </th>
+               <th class="thBorder">
+                   <div class="column4 thFont">AdminId</div>
+               </th>
+               <th class="thBorder">
+                   <div class="column5 thFont">Exchanged</div>
+               </th>
+               <th class="thBorder">
+                   <div class="column6 thFont">CreateTime</div>
+               </th>
+               <th class="thBorder">
+                <div class="column7 thFont">NickName</div>
+               </th>
+               <th class="thBorder">
+                   <div class="column8 thFont">MsgText</div>
+               </th>
+           </tr>
+           <!--
+           <tr id='tr1' class='bgWhite trDisplay'>
+               <td class='tdBorder'>
+                   <div class='column1 tdFont' id='rewardId1'></div>
+               </td>
+               <td class='tdBorder'>
+                   <div class='column2 tdFont' id='rewardCode1'></div>
+               </td>
+               <td class='tdBorder'>
+                   <div class='column3 tdFont' id='groupName1'></div>
+               </td>
+               <td class='tdBorder'>
+                   <div class='column4 tdFont' id='adminId1'></div>
+               </td>
+               <td class='tdBorder'>
+                   <div class='column5 tdFont' id='exchanged1'></div>
+               </td>
+               <td class='tdBorder'>
+                   <div class='column6 tdFont' id='createTime1'></div>
+               </td>
+               <td class='tdBorder'>
+                   <textarea class='column7 tdFont textArea' id='msgText1' readonly disabled rows='1'></textarea>
+               </td>
+           </tr>
+           
+           <tr id="tr2" class="bgGreyE">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId2"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode2"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName2"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId2"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged2"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime2"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea bgGreyE" id="msgText2" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+           <tr id="tr3" class="bgWhite">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId3"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode3"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName3"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId3"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged3"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime3"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea" id="msgText3" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+           <tr id="tr4" class="bgGreyE">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId4"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode4"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName4"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId4"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged4"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime4"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea bgGreyE" id="msgText4" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+           <tr id="tr5" class="bgWhite">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId5"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode5"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName5"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId5"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged5"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime5"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea" id="msgText5" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+           <tr id="tr6" class="bgGreyE">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId6"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode6"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName6"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId6"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged6"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime6"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea bgGreyE" id="msgText6" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+           <tr id="tr7" class="bgWhite">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId7"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode7"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName7"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId7"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged7"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime7"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea" id="msgText7" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+           <tr id="tr8" class="bgGreyE">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId8"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode8"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName8"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId8"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged8"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime8"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea bgGreyE" id="msgText8" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+           <tr id="tr9" class="bgWhite">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId9"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode9"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName9"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId9"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged9"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime9"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea" id="msgText9" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+
+
+           <tr id="tr10" class="bgGreyE">
+               <td class="tdBorder">
+                   <div class="column1 tdFont" id="rewardId10"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column2 tdFont" id="rewardCode10"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column3 tdFont" id="groupName10"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column4 tdFont" id="adminId10"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column5 tdFont" id="exchanged10"></div>
+               </td>
+               <td class="tdBorder">
+                   <div class="column6 tdFont" id="createTime10"></div>
+               </td>
+               <td class="tdBorder">
+                   <textarea class="column7 tdFont textArea bgGreyE" id="msgText10" readonly disabled rows="1"></textarea>
+               </td>
+           </tr>
+           -->
+       </table>
+
+       <div class="pageBtnBox">
+           <button class="noPage lastPage" id="lastPage">lastPage</button>
+           <label  class="page" id="page">1</label>
+           <button class="commonPageBtn nextPage" id="nextPage">nextPage</button>
+       </div>
+   </div>
+    <div class="loader">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+   
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/recordList.js" type="text/javascript" charset="utf-8"></script>
+    <canvas id="space"></canvas>
+    
+
+</body>
+</html>

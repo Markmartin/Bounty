@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118861086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-118861086-1');
+    </script>
+    <meta charset="utf-8">
+    <title>ITC Bounty System[beta]</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/mailBox.css" />
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <link rel="icon" href="titleLogo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="contentCtx">
+        <img class="logo" src="image/logo.png" />
+        <label class="registerReply">
+			<span class="tk">感谢注册ITC赏金系统!</span>
+			<br /> 我们向您的邮箱发送了一封邮件，请前往您的邮箱查看邮件。
+		</label>
+        <button id="gotoEmail" class="goMailBox">前往邮箱</button>
+        <div class="backLoginCn">
+            <img class="back" src="image/back.png" />
+            <label class="backDes">返回登录页</label>
+        </div>
+        <div class="mailTips">
+            <label class="lineLabel">点击邮件中的链接来完成认证并跳转至登录页。</label>
+            <!--<label class="lineLabel">If you want to modify the mailbox, please click here.<span class="modify">Modify</span></label>-->
+            <label class="lineLabel">如果没有收到邮件，请点击这里再次发送邮件。
+				<span id="timerLabel" class="resend">重新发送(60s).</span>
+			</label>
+        </div>
+    </div>
+    <div class="copyRight">All rights reserved to IoT Foundation</div>
+    <div class="loader">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/mailBoxCn.js" type="text/javascript" charset="utf-8"></script>
+    <canvas id="space"></canvas>
+    <script src="js/starcanvas.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ITC Bounty System[beta]</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+
+<body>
+    <script>
+        /***** START BOILERPLATE CODE: Load client library, authorize user. *****/
+
+        // Global variables for GoogleAuth object, auth status.
+        var GoogleAuth;
+
+        /**
+         * Load the API's client and auth2 modules.
+         * Call the initClient function after the modules load.
+         */
+        function handleClientLoad() {
+            gapi.load('client:auth2', initClient);
+        }
+
+        function initClient() {
+            // Initialize the gapi.client object, which app uses to make API requests.
+            // Get API key and client ID from API Console.
+            // 'scope' field specifies space-delimited list of access scopes
+
+            gapi.client.init({
+                'clientId': 'iotchain-207903',
+                'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
+                'scope': 'https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner'
+            }).then(function() {
+                GoogleAuth = gapi.auth2.getAuthInstance();
+
+                // Listen for sign-in state changes.
+                GoogleAuth.isSignedIn.listen(updateSigninStatus);
+
+                // Handle initial sign-in state. (Determine if user is already signed in.)
+                setSigninStatus();
+
+                // Call handleAuthClick function when user clicks on "Authorize" button.
+                $('#execute-request-button').click(function() {
+                    handleAuthClick(event);
+                });
+            });
+        }
+
+        function handleAuthClick(event) {
+            // Sign user in after click on auth button.
+            GoogleAuth.signIn();
+        }
+
+        function setSigninStatus() {
+            var user = GoogleAuth.currentUser.get();
+            isAuthorized = user.hasGrantedScopes('https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner');
+            // Toggle button text and displayed statement based on current auth status.
+            if (isAuthorized) {
+                defineRequest();
+            }
+        }
+
+        function updateSigninStatus(isSignedIn) {
+            setSigninStatus();
+        }
+
+        function createResource(properties) {
+            var resource = {};
+            var normalizedProps = properties;
+            for (var p in properties) {
+                var value = properties[p];
+                if (p && p.substr(-2, 2) == '[]') {
+                    var adjustedName = p.replace('[]', '');
+                    if (value) {
+                        normalizedProps[adjustedName] = value.split(',');
+                    }
+                    delete normalizedProps[p];
+                }
+            }
+            for (var p in normalizedProps) {
+                // Leave properties that don't have values out of inserted resource.
+                if (normalizedProps.hasOwnProperty(p) && normalizedProps[p]) {
+                    var propArray = p.split('.');
+                    var ref = resource;
+                    for (var pa = 0; pa < propArray.length; pa++) {
+                        var key = propArray[pa];
+                        if (pa == propArray.length - 1) {
+                            ref[key] = normalizedProps[p];
+                        } else {
+                            ref = ref[key] = ref[key] || {};
+                        }
+                    }
+                };
+            }
+            return resource;
+        }
+
+        function removeEmptyParams(params) {
+            for (var p in params) {
+                if (!params[p] || params[p] == 'undefined') {
+                    delete params[p];
+                }
+            }
+            return params;
+        }
+
+        function executeRequest(request) {
+            request.execute(function(response) {
+                console.log(response);
+            });
+        }
+
+        function buildApiRequest(requestMethod, path, params, properties) {
+            params = removeEmptyParams(params);
+            var request;
+            if (properties) {
+                var resource = createResource(properties);
+                request = gapi.client.request({
+                    'body': resource,
+                    'method': requestMethod,
+                    'path': path,
+                    'params': params
+                });
+            } else {
+                request = gapi.client.request({
+                    'method': requestMethod,
+                    'path': path,
+                    'params': params
+                });
+            }
+            executeRequest(request);
+        }
+
+        /***** END BOILERPLATE CODE *****/
+
+
+        function defineRequest() {
+            // See full sample for buildApiRequest() code, which is not 
+            // specific to a particular API or API method.
+
+            buildApiRequest('POST',
+                '/youtube/v3/subscriptions', {
+                    'part': 'snippet'
+                }, {
+                    'snippet.resourceId.kind': 'youtube#channel',
+                    'snippet.resourceId.channelId': 'UCJPaVb7NlxhfCHRkz6yuXBw'
+                });
+
+        }
+    </script>
+
+    <button id="execute-request-button">Authorize</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <!-- <div id="fb-root"></div> -->
+    <!-- <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v3.0&appId=343654682791636&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script> -->
+
+    <!-- <div class="fb-like" data-href="https://www.facebook.com/IoTChain/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div> -->
+    <!-- <button id="copyFacebookBtn" style="position: absolute;left: 0; right: 0;z-index: 8;disabled:true;">点击触发facebook</button> -->
+    <!-- <div class="fb-like" style="opacity: 0.5; z-index: 10;" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> -->
+    <!-- <div class="fb-like" data-href="https://www.facebook.com/IoTChain/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> -->
+    <!-- <button id="fbLogin" style="width: 100px; height: 100px;">facebook</button> -->
+    <!-- <div class="g-recaptcha" data-sitekey="6LdlSlkUAAAAAC0MWGMOv36j1Kjsvuu2mnderq7S"></div> -->
+    <!-- <div class="g-recaptcha" data-sitekey="6LdlSlkUAAAAAC0MWGMOv36j1Kjsvuu2mnderq7S" data-callback="onSubmit" data-size="invisible"> -->
+    <!-- </div> -->
+    <!-- <div id="googleVerfify"></div>
+    <button id="googleLogin" style="width: 100px; height: 100px;">google</button> -->
+
+    <!-- <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/guyueTest.js" type="text/javascript" charset="utf-8"></script> -->
+    <!-- <canvas id="space"></canvas>
+    <script src="js/starcanvas.js" type="text/javascript" charset="utf-8"></script> -->
+</body>
+
+</html>

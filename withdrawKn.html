@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118861086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-118861086-1');
+    </script>
+    <meta charset="UTF-8">
+    <title>ITC Bounty System[beta]</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/taskPoint.css" />
+    <link rel="stylesheet" href="css/withdraw.css">
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="icon" href="titleLogo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="withdrawContentCtx">
+        <div class="logoCtx">
+            <img class="wlogo" src="image/iot_logo.png" />
+        </div>
+        <div class="userCtx">
+            <div class="userMail">
+                <img class="mailIcon" src="image/user.png" />
+                <label class="nmailInfo" id="mailInfo"></label>
+                <img class="loginOut" id="loginOut" src="image/loginout.png" />
+            </div>
+        </div>
+        <div class="withdrawCtx" id="withdrawCtx">
+            <label class="rate" id="rate"></label>
+            <label class="balance" id="balance">계정 잔액</label>
+            <div class="withdrawInputBox"  id="withdrawInputBox">
+                <div class="textFieldCtx textFieldRadius">
+                    <img class="fieldLogo" src="image/user.png" />
+                    <input class="textField" id="email" type="text" readonly="readonly" placeholder="" />
+                </div>
+
+                <div class="textFieldCtx textFieldRadius">
+                    <img class="fieldLogo" src="image/wallte.png" />
+                    <input class="textField" id="ethAddr" type="text" readonly="readonly" placeholder="" />
+                </div>
+
+                <button class="button withdrawBtnFrame" id="withdraw">인출</button>
+                <div class="backCtxKn">
+                    <img class="backIcon" src="image/back.png" />
+                    <label class="backMsg" id="backTask">미션 페이지로 돌아가기</label>
+                </div>
+            </div>
+        </div>
+         <!-- withdrawal record -->
+         <div id="withdrawRecordBox">
+                <div class="withdrawRecordCtx">
+                    <div class="recordTableCtx">
+                        <label class="tableTitle">인출 기록</label>
+                        <div class="backToTaskCtx" id="backTo">
+                            <img class="backToTaskIcon" src="image/back.png" />
+                            <label class="backToTaskDes">돌아 가기</label>
+                        </div>
+    
+                        <table class="tableContentCtx">
+                            <tr id="tr0">
+                                <th class="thborder">
+                                    <div class="column1 thFont">DATE（UTC+8）</div>
+                                </th>
+                                <th class="thborder">
+                                    <div class="column2 thFont">AMOUNT</div>
+                                </th>
+                                <th class="thborder">
+                                    <div class="column3 thFont">STATE</div>
+                                </th>
+                            </tr>
+                            <tr id="tr1">
+                               <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate1"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc1"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status1"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr2">
+                                <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate2"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc2"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status2"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr3">
+                                <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate3"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc3"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status3"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr4">
+                                <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate4"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc4"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status4"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr5">
+                                <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate5"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc5"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status5"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr6">
+                                <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate6"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc6"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status6"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr7">
+                                <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate7"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc7"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status7"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr8">
+                                <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate8"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc8"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status8"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr9">
+                               <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate9"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc9"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status9"></div>
+                                </td>
+                            </tr>
+                            <tr id="tr10">
+                               <td class="tdborder">
+                                    <div class="column1 tdFont" id="withdrawDate10"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column2 tdFont" id="withdrawItc10"></div>
+                                </td>
+                                <td class="tdborder">
+                                    <div class="column3 tdFont" id="status10"></div>
+                                </td>
+                            </tr>
+                        </table>
+    
+                        <div class="pageView">
+                            <button class="lastPage" id="lastPage"> 이전 페이지 </button>
+                            <label class="page" id="page"> 1 </label>
+                            <button class="nextPage" id="nextPage"> 다음 페이지 </button>
+                        </div>
+                    </div>
+                </div>
+        </div> 
+    </div>
+    <!-- 弹出框 -->
+    <div class="wPop animated" id="wPop">
+            <img id="wPopClose" class="wPopClose" src="image/withdraw_close.png"/>
+            <div class="wPopContentBox">
+                   <div class="wPopAvailablePoint">잔액: <span id="wPopAvailablePoint"></span> 포인트</div>
+                   <div class="wPopWithdrawalBox">
+                       <div class="wPopWithdrawalLeft">
+                           <div class="wPopWithdrawalItc">
+                               <input id="wPopWithdrawalInput" name="inputPoint" type="number" min="20" autofocus="true" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
+                               <span class="wPopWithdrawalTxt">포인트 = </span><div id="wPopWithdrawalItcCount" class="wPopWithdrawalItcCount">0</div><span class="wPopWithdrawalTxt"> ITC</span>
+                           </div>
+                           <div class="wPopWithdrawalItcWarnBox" id="wPopWithdrawalItcWarnBox">
+                               <p id="wPopWithdrawalItcWarn"></p>
+                           </div>
+                       </div>
+                       <div class="wPopWithdrawalBtn" id="wPopWithdrawalBtn">인출</div>
+                   </div>
+                   <p class="wPopConversionRatio" id="wPopConversionRatio"></p>
+                   <span class="wPopTip">인출가능 최소 포인트 20포인트</span>
+                   <span class="wPopTip">인출 후 3개 근무일 내에 수령</span>
+                   <div class="wPopWithdrawalRecords" id="wPopWithdrawalRecords">인출 기록</div>
+            </div>
+       </div>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/withdrawKn.js" type="text/javascript" charset="utf-8"></script>
+    <canvas id="space"></canvas>
+    <script src="js/starcanvas.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

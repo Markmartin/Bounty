@@ -1,0 +1,585 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118861086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-118861086-1');
+    </script>
+    <meta charset="utf-8">
+    <title>ITC Bounty System[beta]</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/taskPoint.css" />
+    <link rel="stylesheet" href="css/loaders.min.css" />
+    <link rel="stylesheet" href="css/marquee.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="icon" href="titleLogo.ico" type="image/x-icon" />
+</head>
+
+<body onselectstart="return false">
+    <!-- facebook -->
+    <!--<script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1974408719443045',
+                cookie: true,
+                xfbml: true,
+                version: 'v3.0'
+            });
+            FB.AppEvents.logPageView();
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>-->
+    <!-- facebook -->
+    <div class="allContentCtx">
+        <div class="tabBarCtx">
+            <div class="tabBar_firstCtx">
+                <a href="https://iotchain.io/">
+                    <img class="logo" src="image/iot_logo.png" />
+                </a>
+            </div>
+            <div class="tabBar_secondCtx">
+                <div class="exchangeMenuBtn" id="exchangeMenuBtn">
+                    <img class="exchangeIcon" src="image/exchangeIcon.png" />
+                    <label class="exchangeBtnDes">Redeem Code</label>
+                </div>
+                <div class="userMail">
+                    <img class="mailIcon" src="image/user.png" />
+                    <label id="mailInfo" class="mailInfo"></label>
+                    <img id="loginOut" class="loginOut" src="image/loginout.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="taskTipsCtx">
+            <div class="givenPointCtx">
+                <div class="todayPointCtx">
+                    <label class="givenPoints" id="givenPoints"></label>
+                    <label class="availableDes">Today's available points</label>
+                </div>
+                <div class="vline"></div>
+                <div class="pointDesCtx">
+                    <label class="pointDes">Total reward 1000 points per day</label>
+                    <!-- <label class="pointDes">Up to 50 points per account per day</label> -->
+                    <label class="pointDes">Points refresh 0:00(midnight) Singapore time (UTC+8)</label>
+                    <label class="pointDes">The task will continue to be updated</label>
+                </div>
+            </div>
+            <div class="pointsAndInviteCtx">
+                <div class="pointCtx dataBorder">
+                    <label class="des">Your Points</label>
+                    <label class="pointLabel" id="pointLabel"></label>
+                </div>
+                <div class="inviteCountCtx dataBorder">
+                    <label class="ides">Invited People</label>
+                    <label class="invitedLabel" id="inviteCount"></label>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="marqueeCtx">
+			<p class="marqueeContent marquee marquee-speed-slow" data-marquee="*Total reward 2000 points per day.&nbsp;&nbsp;Up to 50 points per account per day.&nbsp;&nbsp;12 p.m Pacific time refresh bonus amount"></p>
+		</div> -->
+        <div id="task">
+
+            <!--<div class="channelCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="taskIcon" src="image/telegram.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <label id="channelDes" class="taskDes ncTaskDes">SUBSCRIBE ITC ANNOUNCEMENT CHANNEL TO GET
+                                <span id="channelDesY" class="taskDesY ncTaskDesY">2 POINTS</span>
+                        </label>
+                        <label class="channelLink">https://t.me/IoTChainChannel</label>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="channelSubscribeBtn" class="button subscribeBtn ncButton">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>-->
+
+            <div class="redditCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="taskIcon" src="image/reddit.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <label id="redditDes" class="taskDes ncTaskDes">SUBSCRIBE ITC ON REDDIT TO GET
+                                <span id="redditDesY" class="taskDesY ncTaskDesY">2 POINTS</span>
+                            </label>
+                        <label class="redditLink">https://www.reddit.com/r/iotchain/</label>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="rSubscribeBtn" class="button subscribeBtn ncButton">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>
+
+            <!--<div class="steemitCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="taskIcon" src="image/steemit.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <label id="steemitDes" class="taskDes ncTaskDes">SUBSCRIBE ITC ON STEEMIT TO GET
+                                <span id="steemitDesY" class="taskDesY ncTaskDesY">2 POINTS</span>
+                            </label>
+                        <label class="steemitLink">https://steemit.com/@iot-chain</label>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="sSubscribeBtn" class="button subscribeBtn ncButton">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>-->
+
+            <div class="youtubeCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="taskIcon" src="image/youtube.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <label id="youtubeDes" class="taskDes ncTaskDes">SUBSCRIBE ITC ON YOUTUBE TO GET
+                                <span id="youtubeDesY" class="taskDesY ncTaskDesY">3 POINTS</span>
+                            </label>
+                        <label class="youtubeLink">https://www.youtube.com/channel/UCJPaVb7NlxhfCHRkz6yuXBw</label>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="ySubscribeBtn" class="button subscribeBtn ncButton">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>
+
+            <div class="telegramCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="taskIcon" src="image/telegram.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <!--<label id="teleDes" class="taskDes ncTaskDes">SEND VERIFICATION CODE TO GET
+                            <span id="teleDesY" class="taskDesY ncTaskDesY">2 POINTS</span>
+                        </label>-->
+                        <label id="teleDes" class="taskDes ncTaskDes">SUBSCRIBE ITC ANNOUNCEMENT CHANNEL TO GET
+                            <span id="teleDesY" class="taskDesY ncTaskDesY">3 POINTS</span>
+                        </label>
+                        <div class="telegramTaskDes">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Join ITC Telegram Group</label>
+                            <label class="telegramLink">https://t.me/IoTChain_2</label>
+                        </div>
+                        <div class="telegramTaskDes">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Send the following verification code to the group.</label>
+                            <label id="codeLabel" class="copyContent codeSpace" onselectstart="return false"></label>
+                        </div>
+                        <div class="telegramTaskDesSub">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Subscribe ITC announcement channel.</label>
+                            <label class="telegramLink">https://t.me/IoTChainChannel</label>
+                        </div>
+                        <div class="telegramTaskDesVertify">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Verify the subscribe above.</label>
+                        </div>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="tJoinBtn" class="button tJoinBtn ncButton">Join</button>
+                        <button id="tCopyBtn" class="button tCopyBtn ncButton" data-clipboard-target="#codeLabel">Copy</button>
+                        <button id="channelSubscribeBtn" class="button channelSubscribeBtn ncButton">Subscribe</button>
+                        <button id="vertifyChannelBtn" class="button vertifyChannelBtn ncButton">Vertify</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>
+
+            <div class="facebookCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="centerTaskIcon" src="image/facebook.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <label id="fDes" class="taskDes ncTaskDes">SHARE FACEBOOK
+                            <span class="taskDesY"></span> TO GET
+                            <span id="fDesY" class="taskDesY ncTaskDesY">2 POINTS</span>
+                        </label>
+                        <div class="telegramTaskDes">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Bind account with your facebook.</label>
+                            <label class="telegramLink">https://www.facebook.com/IoTChain/</label>
+                        </div>
+                        <div class="twitterTaskDes">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Share news about ITC on Facebook.</label>
+                        </div>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="fBindBtn" class="button fBindBtn ncButton">Bind</button>
+                        <button id="fShareBtn" class="button fShareBtn ncButton">Share</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>
+
+            <div class="twitterCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="taskIcon" src="image/twitter.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <label id="tDes" class="taskDes ncTaskDes">SEND TWITTER
+                            <span class="taskDesY"></span> TO GET
+                            <span id="tDesY" class="taskDesY ncTaskDesY">2 POINTS</span>
+                        </label>
+                        <div class="telegramTaskDes">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Bind account with your Twitter.</label>
+                            <label class="telegramLink">https://twitter.com/IoT_Chain</label>
+                        </div>
+                        <div class="twitterTaskDes">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Retweet news about ITC on Twitter.</label>
+                            <!--<label class="telegramLink">https://twitter.com/IoT_Chain</label>-->
+                        </div>
+                        <div class="twitterTaskDes">
+                            <img class="circle" src="image/circle.png" />
+                            <label class="taskMsg taskMsgSpace">Verify the retweet above.</label>
+                            <!--<label class="telegramLink">https://twitter.com/IoT_Chain</label>-->
+                        </div>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="tBindBtn" class="button tBindBtn ncButton">Bind</button>
+                        <a href="https://twitter.com/intent/retweet?tweet_id=1002713604326486016" id="tRetweetBtn" class="button tRetweetBtn ncButton">Retweet</a>
+                        <button id="tVerifyBtn" class="button tVerifyBtn ncButton">Verify</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>
+
+            <div class="inviteCtx">
+                <div class="taskContent">
+                    <div class="taskIconCtx">
+                        <img class="taskIcon" src="image/share.png" />
+                    </div>
+                    <div class="taskDesCtx">
+                        <label id="iDes" class="taskDes ncTaskDes">INVITE FRIENDS TO GET
+                            <span id="iDesY" class="taskDesY ncTaskDesY">2 POINTS</span>
+                        </label>
+                        <label class="taskMsg noTagTaskMsgSpace">
+                            Share the following link to your friends, get 2 points for each friend
+                            <br /> that signs up and completes 2 tasks.
+                        </label>
+                        <label id="inviteLink" class="copyContent inviteSpace">
+                            https://Bounty.iotchain.io/register.html
+                        </label>
+                    </div>
+                    <div class="taskActionCtx">
+                        <button id="iCopyBtn" class="button iCopyBtn ncButton" data-clipboard-target="#inviteLink">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadowLine"></div>
+        </div>
+
+        <div id="rewardCodeRecord">
+            <div class="exchangeRecordCtx">
+                <div class="recordTableCtx">
+                    <label class="tableTitle">Redeem Records</label>
+                    <div class="backToTaskCtx" id="backToTask">
+                        <img class="backToTaskIcon" src="image/back.png" />
+                        <label class="backToTaskDes">Back to my tasks</label>
+                    </div>
+
+                    <table class="tableContentCtx">
+                        <tr id="tr0">
+                            <th class="thborder">
+                                <div class="column1 thFont">DATE</div>
+                            </th>
+                            <th class="thborder">
+                                <div class="column2 thFont">CODE</div>
+                            </th>
+                            <th class="thborder">
+                                <div class="column3 thFont">POINTS</div>
+                            </th>
+                        </tr>
+                        <tr id="tr1">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time1"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code1"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint1"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr2">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time2"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code2"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint2"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr3">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time3"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code3"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint3"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr4">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time4"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code4"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint4"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr5">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time5"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code5"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint5"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr6">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time6"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code6"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint6"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr7">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time7"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code7"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint7"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr8">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time8"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code8"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint8"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr9">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time9"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code9"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint9"></div>
+                            </td>
+                        </tr>
+                        <tr id="tr10">
+                            <td class="tdborder">
+                                <div class="column1 tdFont" id="time10"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column2 tdFont" id="code10"></div>
+                            </td>
+                            <td class="tdborder">
+                                <div class="column3 tdFont" id="exchangePoint10"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="pageView">
+                        <button class="lastPage" id="lastPage"> lastPage </button>
+                        <label class="page" id="page"> 1 </label>
+                        <button class="nextPage" id="nextPage"> nextPage </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyRightCtx">
+            All rights reserved to IoT Foundation
+        </div>
+    </div>
+
+    <!-- 弹出菜单 -->
+    <div class="popUp animated" id="popUp">
+        <button class="menuClose" id="menuClose"></button>
+        <div class="rewarCodeLabelCtx">
+            <input class="rewardCode" id="rewardCode" type="text" placeholder="Please Input your redeem code" />
+        </div>
+        <button class="exchangeRecordBtn btn" id="exchangeRecordBtn">Redeem Records</button>
+        <button class="exchangeBtn btn" id="exchangeBtn">Redeem</button>
+        <div class="exchangeDesCtx">
+            <label class="exchangeDes">Get a redeem code which equals to 5 points in</label>
+            <label class="exchangeDes">bounty system by leaving active messages in</label>
+            <label class="exchangeDes">the telegram group.</label>
+        </div>
+        <label class="rewardCodeRuleLink" id="rewardCodeRuleLink">For more details,please click here</label>
+    </div>
+    <!-- load动画 -->
+    <div class="loader">
+        <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- 周排行榜 -->
+    <!-- <div class="rankListCtx" id="rank">
+        <div class="rankBtnCtx rankBtnBackImage rankBtnBorder" id="rankSwitchBtn">
+            <label class="rankBtnTitle" id="rankBtnTitle">Open</label>
+            <div class="arrow arrowOpen" id="arrow"></div>
+        </div>
+        <div class="rankCtx rankBorder">
+            <label class="rankTitle">WEEKLY RANKING</label>
+            <div class="rank singularBackColor">
+                <label class="order">1</label>
+                <label class="rankMail" id="mail1">--</label>
+                <label class="rankPoint" id="point1">--</label>
+            </div>
+            <div class="rank pluralBackColor">
+                <label class="order">2</label>
+                <label class="rankMail" id="mail2">--</label>
+                <label class="rankPoint" id="point2">--</label>
+            </div>
+            <div class="rank singularBackColor">
+                <label class="order">3</label>
+                <label class="rankMail" id="mail3">--</label>
+                <label class="rankPoint" id="point3">--</label>
+            </div>
+            <div class="rank pluralBackColor">
+                <label class="order">4</label>
+                <label class="rankMail" id="mail4">--</label>
+                <label class="rankPoint" id="point4">--</label>
+            </div>
+            <div class="rank singularBackColor">
+                <label class="order">5</label>
+                <label class="rankMail" id="mail5">--</label>
+                <label class="rankPoint" id="point5">--</label>
+            </div>
+            <div class="rank pluralBackColor">
+                <label class="order">6</label>
+                <label class="rankMail" id="mail6">--</label>
+                <label class="rankPoint" id="point6">--</label>
+            </div>
+            <div class="rank singularBackColor">
+                <label class="order">7</label>
+                <label class="rankMail" id="mail7">--</label>
+                <label class="rankPoint" id="point7">--</label>
+            </div>
+            <div class="rank pluralBackColor">
+                <label class="order">8</label>
+                <label class="rankMail" id="mail8">--</label>
+                <label class="rankPoint" id="point8">--</label>
+            </div>
+            <div class="rank singularBackColor">
+                <label class="order">9</label>
+                <label class="rankMail" id="mail9"></label>
+                <label class="rankPoint" id="point9"></label>
+            </div>
+            <div class="rank pluralBackColor">
+                <label class="order">10</label>
+                <label class="rankMail" id="mail10">--</label>
+                <label class="rankPoint" id="point10">--</label>
+            </div>
+            <div class="userRank">
+                <label class="userRankDes">Your Weekly Ranking</label>
+                <label class="userOrder" id="userOrder">--</label>
+                <label class="userRankMail" id="rankUserMail">--</label>
+                <label class="userPoint" id="rankUserPoint">--</label>
+            </div>
+            <div class="rankDesCtx">
+                <div class="rankDesFirst">
+                    <img class="rankCircle" src="image/circle.png" />
+                    <label class="rankDes">
+                        Weekly Ranking will be refreshed at 00:00
+                        <br/> Sunday GMT+8(Singapore Time)
+                    </label>
+                </div>
+
+                <div class="rankDesSecond">
+                    <img class="rankCircle" src="image/circle.png" />
+                    <label class="rankDes">
+                        Enrolling in TOP 10 will be rewarded with <br/>
+                       extra ITC Token
+                    </label>
+                </div>
+
+                <div class="rankDesThird">
+                    <label class="rankDes rankDesUnderLine" id="rankRule">
+                            For more details,please click here
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/hello.all.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/taskPoint.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/youtubeSubscribe.js" type="text/javascript" charset="utf-8"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+    <canvas id="space"></canvas>
+    <script src="js/starcanvas.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
